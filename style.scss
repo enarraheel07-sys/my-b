@@ -1,0 +1,47 @@
+ // 1️⃣ المتغيرات
+$main-color: #87db34;
+$secondary-color: #970f0f;
+$font-family: 'Arial, sans-serif';
+$btn-padding: 10px 20px;
+
+// 2️⃣ mixin لإعادة الاستخدام
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 3️⃣ القواعد
+body {
+  font-family: $font-family;
+  background-color: #f5f5f5;
+  color: $main-color;
+}
+
+                        
+// 4️⃣ header
+.header {
+  background-color: $secondary-color;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+}
+
+// 5️⃣ container يستخدم mixin
+.container {
+  @include center;
+  height: 200px;
+}
+// 6️⃣ زر Button
+.btn {
+  background-color: $main-color;
+  color: beige;
+  padding: $btn-padding;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+&:hover{
+  background:transparent;
+  color: black;
+}
+}
